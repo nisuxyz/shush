@@ -1,4 +1,4 @@
-# Shush
+# shush
 
 A privacy-focused peer-to-peer file sharing web application that enables secure, encrypted file transfers directly between browsers.
 
