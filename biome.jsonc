@@ -1,0 +1,9 @@
+{
+  "files": {
+    "include": ["src/**/*.js", "src/**/*.ts"],
+    "ignore": ["test"]
+  },
+  "formatter": {
+    "indentStyle": "space"
+  }
+}
