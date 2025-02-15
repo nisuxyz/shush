@@ -5,5 +5,5 @@
 	let { children } = $props();
 </script>
 
-<Toaster/>
+<Toaster />
 {@render children()}
