@@ -17,7 +17,7 @@
 		Tooltip,
 		Alert
 	} from 'flowbite-svelte';
-	import { DotsVerticalOutline } from 'flowbite-svelte-icons';
+	import { DotsVerticalOutline, LockOutline } from 'flowbite-svelte-icons';
 	import toast from 'svelte-french-toast';
 	// @ts-ignore
 	import QrCode from 'svelte-qrcode';
@@ -97,27 +97,16 @@
 			</Alert>
 			<hr class="mb-4" />
 
-			<div class="grid grid-cols-3 gap-6">
+			<div class="grid gap-6 md:grid-cols-3">
 				{#each $links ?? [] as link}
 					<Card padding="sm">
 						<div class="flex items-start justify-end gap-2">
+							{#if link.encrypted}
+								<LockOutline />
+							{/if}
 							<h3 class="mb-4 flex-1 truncate text-lg font-medium">
 								{link.name}
 							</h3>
-							{#if link.encrypted}
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="mr-2 h-4 w-4 text-gray-400"
-									viewBox="0 0 20 20"
-									fill="currentColor"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-							{/if}
 							<Toggle
 								color="green"
 								checked={link.enabled}

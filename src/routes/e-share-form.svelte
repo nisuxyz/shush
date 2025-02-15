@@ -49,10 +49,15 @@
 	};
 </script>
 
-<Modal bind:open={showModal} size="lg" autoclose={false} class="w-full">
+<Modal
+	bind:open={showModal}
+	size="lg"
+	autoclose={false}
+	class="mt-[5vh] max-h-[32rem] w-full md:max-h-auto"
+>
 	<form
 		id="eshareform"
-		class="space-y-4"
+		class="m-auto max-h-full space-y-4 overflow-y-auto"
 		method="POST"
 		enctype="multipart/form-data"
 		use:enhance={async ({ formData, cancel }) => {
@@ -147,6 +152,7 @@
 			cancel();
 		}}
 	>
+		<h3 class="text-center text-2xl">(shh)are new data</h3>
 		<div class="space-y-4 p-4">
 			<div>
 				<Label for="name">Name (optional)</Label>
