@@ -65,6 +65,12 @@
 				<li class="text-gray-400">
 					- <span class="font-semibold">no</span> servers storing your data
 				</li>
+				<hr />
+				<li class="text-gray-400">
+					<b>why do you need to sign in every time the page refreshes?</b> since shush doesn't use servers,
+					in order to avoid storing your password unencrypted, you need to sign in every time you open
+					the app or refresh the page. this is a security feature.
+				</li>
 			</ul>
 		</div>
 
